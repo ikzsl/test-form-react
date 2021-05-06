@@ -5,10 +5,6 @@
   left: 30px;
 }
 
-
-.input[type='checkbox']:focus ~ .label {
-}
-
 .input[type='checkbox']:focus ~ .label::before {
   content: '';
   display: block;
@@ -28,11 +24,9 @@
   position: absolute;
   left: -30px;
   top: 0;
-
   width: 16px;
   height: 16px;
   border: 1px solid var(--gray-border);
-  // border-radius: 50%;
 }
 
 .input:checked ~ .label::after {

@@ -12,9 +12,7 @@ export const LoginPage = () => {
     watch,
     handleSubmit,
     reset,
-    formState: { dirtyFields, isValid, isDirty, errors, isSubmitted, isValidating },
-    setError,
-    getValues,
+    formState: { dirtyFields, isDirty, errors },
   } = useForm({
     mode: 'all',
   });
@@ -22,16 +20,16 @@ export const LoginPage = () => {
   const watchAllFields = watch();
 
   const registerOptions = {
-    username: { required: 'Email is empty' },
+    username: { required: 'Логин нужен' },
     password: {
-      required: 'Password is empty',
+      required: 'Нужен пароль',
       minLength: {
         value: 8,
         message: 'Пароль должен быть не короче 8 символов',
       },
     },
     agree: {
-      required: 'required',
+      required: 'Обязательное поле',
     },
   };
 
@@ -81,18 +79,11 @@ export const LoginPage = () => {
           {...register('password', registerOptions.password)}
           autoComplete='current-password'
         />
-        {/* <input
-          {...register('agree', registerOptions.agree)}
-          type='checkbox'
-          name='agree'
-          id='agree'
-        /> */}
         <CheckBox
           type='checkbox'
           name='agree'
           {...register('agree', registerOptions.agree)}
           label='согласен с офертой'
-          
         />
 
         <GeneralButton

@@ -12,14 +12,12 @@ export const GeneralInput = forwardRef(function GeneralInput(
     value,
     marginBottom = 'default',
     width = 'auto',
-    readOnly,
     name,
     isValue,
     withDefaultValue,
     defaultValue,
     autoComplete,
     onFilled,
-    errorMessage,
   },
   ref
 ) {
@@ -49,8 +47,7 @@ export const GeneralInput = forwardRef(function GeneralInput(
       className={classNames(
         styles.generalInput,
         { [styles[`marginBottom-${marginBottom}`]]: marginBottom },
-        { [styles[`width-${width}`]]: width },
-        { [styles[`readOnly`]]: readOnly }
+        { [styles[`width-${width}`]]: width }
       )}
     >
       <label
@@ -72,14 +69,12 @@ export const GeneralInput = forwardRef(function GeneralInput(
           }}
           className={classNames(styles.input)}
           value={value}
-          readOnly={readOnly}
           name={name}
           ref={ref}
           defaultValue={defaultValue}
           onAnimationStart={onAnimationStart}
           autoComplete={autoComplete}
         />
-        
       </div>
     </div>
   );
