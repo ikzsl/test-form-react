@@ -92,7 +92,7 @@ export const LoginPage = () => {
           className={styles.button}
           type='submit'
         >
-          Login
+          Войти
         </GeneralButton>
         <div className={styles.formMessage}>
           {!isDirty && message}
