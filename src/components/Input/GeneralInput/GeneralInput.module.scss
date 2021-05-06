@@ -1,0 +1,96 @@
+@keyframes onAutoFillStart {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes onAutoFillCancel {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.generalInput {
+  position: relative;
+  padding-top: 6px;
+}
+.width-full {
+  width: 100%;
+}
+.width-default {
+  width: 240px;
+}
+.width-big {
+  width: 380px;
+}
+.marginBottom-none {
+  margin-bottom: 14px;
+}
+.marginBottom-default {
+  margin-bottom: 20px;
+}
+.inputWrapper {
+  position: relative;
+}
+.input {
+  height: 30px;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--gray-border);
+  font-size: 14px;
+  line-height: 1;
+  color: var(--black);
+  padding: 0;
+  -webkit-box-shadow: none;
+  -webkit-text-fill-color: var(--black);
+  &[type="password"] {
+    font-family: Arial, sans-serif;
+  }
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid var(--blue);
+  }
+  &:invalid {
+    box-shadow: none;
+  }
+  .readOnly & {
+    border-bottom-color: transparent;
+  }
+
+
+  filter: none; // remove autofill styles in Firefox
+}
+
+.inputError {
+  border-color: var(--red);
+}
+
+.label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  display: block;
+  margin-bottom: 6px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--gray-text);
+  transition: all 0.1s ease;
+  z-index: 1;
+}
+
+.labelTop {
+  top: -5px;
+  font-size: 11px;
+  text-transform: lowercase;
+}
+
+
+

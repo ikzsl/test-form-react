@@ -1,0 +1,29 @@
+.LoginForm {
+  width: 100%;
+  position: relative;
+}
+.form {
+  position: relative;
+  margin-bottom: 30px;
+  min-width: 320px;
+}
+.button {
+  margin-top: 30px;
+}
+.link {
+  color: var(--black);
+  text-decoration: none;
+}
+.formMessage {
+  display: block;
+  margin: 35px 0 28px 0;
+  position: absolute;
+  bottom: -100px;
+  color: green;
+}
+
+.errorMessage {
+  color: red;
+  list-style: none;
+  padding: 0;
+}

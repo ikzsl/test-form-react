@@ -1,0 +1,173 @@
+.generalButton {
+  font-weight: 600;
+  border: none;
+  font-size: 14px;
+  font-family: "Jost", sans-serif;
+  text-decoration: none;
+}
+.width-auto {
+  width: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.width-full {
+  width: 100%;
+}
+.width-default {
+  width: 90px;
+}
+.icon {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  & path {
+    fill: var(--white);
+  }
+}
+.editIcon path {
+  fill: var(--white);
+}
+.deleteIcon path {
+  fill: var(--white);
+}
+.addIcon path {
+  fill: var(--white);
+}
+.contained {
+  height: 40px;
+  border-radius: 5px;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.withIcon {
+    padding-left: 12px;
+    padding-right: 25px;
+  }
+}
+
+.contained.default {
+  // border: 1px solid red;
+  color: var(--white);
+  padding: 0 25px;
+  & .icon {
+    margin: 0;
+    & path {
+      fill: var(--black);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    & .icon path {
+      fill: var(--gray);
+    }
+  }
+  &:active {
+    & .icon path {
+      fill: var(--black);
+    }
+  }
+}
+.contained.blue {
+  background-color: var(--blue);
+  &:hover,
+  &:focus {
+    background-color: var(--light-blue);
+  }
+  &:active {
+    background-color: var(--dark-blue);
+  }
+}
+.contained.red {
+  background-color: var(--red);
+  &:hover {
+    background-color: var(--red-light);
+  }
+  &:active {
+    background-color: var(--red-dark);
+  }
+}
+.contained.green {
+  background-color: var(--green);
+  &:hover,
+  &:focus {
+    background-color: var(--green-light);
+  }
+  &:active {
+    background-color: var(--green-dark);
+  }
+}
+.contained.disabled {
+  &:disabled {
+    background-color: var(--ghost-gray);
+    color: var(--gray-focus);
+    &:hover {
+      background-color: var(--ghost-gray);
+      color: var(--gray-focus);
+    }
+  }
+}
+.outlined {
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  border-width: 1px;
+  border-style: solid;
+  &.withIcon {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+}
+.outlined.blue {
+  color: var(--blue);
+  border-color: var(--sky-blue);
+  &:hover,
+  &:focus {
+    border-color: var(--blue);
+  }
+  &:active {
+    background-color: var(--blue);
+    color: var(--white);
+  }
+}
+.outlined.default {
+  color: var(--black);
+  border-color: var(--gray-disable);
+  &:hover,
+  &:focus {
+    border-color: var(--black);
+  }
+  &:active {
+    background-color: var(--black);
+    color: var(--white);
+  }
+}
+.text {
+  text-decoration: none;
+}
+.text.blue {
+  color: var(--blue);
+  &:hover {
+    color: var(--light-blue);
+  }
+}
+.text.default {
+  color: var(--black);
+  &:hover,
+  &:focus {
+    color: var(--blue);
+  }
+}
+.text.disabled {
+  &:disabled {
+    color: var(--gray-focus);
+    &:hover,
+    &:focus {
+      color: var(--gray-focus);
+    }
+  }
+}

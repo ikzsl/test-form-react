@@ -1,0 +1,63 @@
+.label {
+  font-size: 15px;
+  margin-bottom: 20px;
+  position: relative;
+  left: 30px;
+}
+
+
+.input[type='checkbox']:focus ~ .label {
+}
+
+.input[type='checkbox']:focus ~ .label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -30px;
+  top: 0;
+
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--gray-border);
+  box-shadow: inset 0 0 2px var(--blue);
+}
+
+.label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -30px;
+  top: 0;
+
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--gray-border);
+  // border-radius: 50%;
+}
+
+.input:checked ~ .label::after {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 8px;
+  position: absolute;
+  left: -25px;
+  top: 3px;
+  border: 2px solid var(--blue);
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.visuallyHidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
